@@ -1,7 +1,7 @@
 .{
-    .name = .zig_scheduler_linux,
+    .name = .zig_scheduler,
     .version = "0.1.0",
-    .fingerprint = 0xd66e93fc5fe379f5,
+    .fingerprint = 0xabe1ac7175213bb1,
     .minimum_zig_version = "0.16.0",
     .dependencies = .{},
     .paths = .{
@@ -9,9 +9,10 @@
         "README.md",
         "build.zig",
         "build.zig.zon",
-        "qa",
+        "docs",
+        "fixtures",
+        "scenarios",
         "src",
         "tools",
-        "simulator",
     },
 }
