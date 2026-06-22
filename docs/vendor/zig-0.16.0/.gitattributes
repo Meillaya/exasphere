@@ -1,0 +1,5 @@
+# Official vendored documentation preserves upstream whitespace; verify integrity via SHA256SUMS.
+*.html -diff
+*.js -diff
+*.wasm -diff
+*.tar -diff
