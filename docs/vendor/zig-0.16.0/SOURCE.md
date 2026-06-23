@@ -33,6 +33,24 @@ curl --fail --location --retry 3 --connect-timeout 10 --max-time 120 \
 python3 qa/zig_docs_vendor_check.py --root docs/vendor/zig-0.16.0
 ```
 
+## Plain-text stdlib artifacts
+
+Two generated plain-text files are derived from the official `std/sources.tar` snapshot for grep-friendly offline use:
+
+- `zig-0.16.0-stdlib-sources.txt`: concatenates every `.zig` file from `std/sources.tar` with file boundary headers.
+- `zig-0.16.0-stdlib-reference.txt`: source-derived public API index built from public declarations and adjacent `///` / `//!` documentation, plus the static text from the official std docs shell.
+
+Generation command used after refreshing `std/sources.tar`:
+
+```sh
+python3 - <<'PY'
+# Extract std/sources.tar, concatenate every .zig file, and build a public-declaration reference index.
+# See repository history for the exact generator used for this snapshot.
+PY
+( cd docs/vendor/zig-0.16.0 && sha256sum SOURCE.md langref/index.html std/index.html std/main.js std/main.wasm std/sources.tar zig-0.16.0-stdlib-reference.txt zig-0.16.0-stdlib-sources.txt > SHA256SUMS )
+python3 qa/zig_docs_vendor_check.py --root docs/vendor/zig-0.16.0
+```
+
 ## Checksums
 
 Checksums are recorded in `SHA256SUMS` and validated by `qa/zig_docs_vendor_check.py` without network access.
