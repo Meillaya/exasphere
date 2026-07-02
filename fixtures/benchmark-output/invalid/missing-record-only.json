@@ -3,7 +3,6 @@
   "hard_thresholds_enforced": false,
   "host_mutation": false,
   "metrics": {
-    "apikey": 1,
     "jobs": 1,
     "read_bw_bytes": 4096000.0,
     "read_iops": 1200.5,
@@ -21,7 +20,6 @@
   },
   "privacy_sanitized": true,
   "production_capacity_claim": false,
-  "record_only": true,
   "release_eligible": false,
   "run_count": 1,
   "sample_count": 1,
@@ -30,7 +28,6 @@
   "threshold_status": "record_only",
   "tool": "fio",
   "units": {
-    "apikey": "count",
     "jobs": "count",
     "read_bw_bytes": "bytes_per_second",
     "read_iops": "iops",

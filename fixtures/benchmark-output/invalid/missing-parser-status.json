@@ -3,7 +3,6 @@
   "hard_thresholds_enforced": false,
   "host_mutation": false,
   "metrics": {
-    "apikey": 1,
     "jobs": 1,
     "read_bw_bytes": 4096000.0,
     "read_iops": 1200.5,
@@ -16,7 +15,6 @@
   "output_sha256": "08201f968988cfa85742d07e3a7d032dab8b5f86e548a79716bd5ebc79aeaee9",
   "parser_provenance": {
     "parser": "qa/benchmark_output_parse.py",
-    "parser_status": "PARSED",
     "parser_version": "benchmark-output/v1"
   },
   "privacy_sanitized": true,
@@ -30,7 +28,6 @@
   "threshold_status": "record_only",
   "tool": "fio",
   "units": {
-    "apikey": "count",
     "jobs": "count",
     "read_bw_bytes": "bytes_per_second",
     "read_iops": "iops",
